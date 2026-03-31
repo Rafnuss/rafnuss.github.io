@@ -1,1 +1,3 @@
-# rafnuss.github.io
+# raphaelnussbaumer.com
+
+Personal website for Raphaël Nussbaumer
