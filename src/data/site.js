@@ -162,7 +162,7 @@ export const siteContent = {
       {
         id: "research-bird-migration-modeling",
         title: "Bird Migration Modeling",
-        url: "https://birdmigrationmap.vogelwarte.ch/",
+        url: "https://birdmigrationmap.github.io/",
         image: "/assets/previews/research-bird-migration-modeling.png",
         previewImage: "/assets/previews/research-bird-migration-modeling.png",
         imageAlt: "Bird Migration Map preview",
