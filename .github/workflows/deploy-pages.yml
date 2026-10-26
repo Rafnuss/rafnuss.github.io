@@ -4,6 +4,7 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read
@@ -20,11 +21,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -32,6 +35,17 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Checkout the published Défilé website
+        uses: actions/checkout@v4
+        with:
+          ref: defile-site
+          path: .defile-site
+
+      - name: Include Défilé and its lowercase redirect
+        run: |
+          cp -R .defile-site/site dist/defile
+          cp -R dist/defileViz dist/defileviz
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
