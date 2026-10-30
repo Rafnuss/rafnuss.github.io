@@ -5,6 +5,10 @@ export const captureConfig = {
   ornitho2ebird: {
     actions: [
       {
+        type: "click",
+        selector: "text=No thanks",
+      },
+      {
         type: "select-option-by-label-anywhere",
         label: "ornitho.ch",
       },
@@ -17,22 +21,19 @@ export const captureConfig = {
   "global-rare-bird": {
     url: "https://zoziologie.raphaelnussbaumer.com/global-rare-ebird/?mode=r&r=US&t=1",
     waitAfterLoadMs: 5000,
+    actions: [{ type: "click", selector: "text=Reject analytics" }],
   },
   "see-your-observations": {
     actions: [
       {
-        type: "wait-for-selector",
-        selector: "#uploadMyEBirdData",
-      },
-      {
-        type: "set-input-files",
-        selector: "#uploadMyEBirdData",
-        path: "/Users/rafnuss/Library/CloudStorage/Dropbox/MyEBirdData.csv",
+        type: "click",
+        selector: "text=Try a demo",
       },
       {
         type: "wait-for-timeout",
-        ms: 2500,
+        ms: 12000,
       },
+      { type: "click", selector: "#analytics-decline" },
     ],
   },
   "research-bird-migration-modeling": {
