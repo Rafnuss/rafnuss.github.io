@@ -80,6 +80,13 @@ export const siteContent = {
       alt: "eBird Hotspot Deduper preview",
       kind: "web",
     },
+    "photo-montage": {
+      id: "photo-montage",
+      title: "Species Photo Montage",
+      description: "Build a printable photo montage of a species list from openly licensed iNaturalist photos.",
+      url: "https://zoziologie.raphaelnussbaumer.com/photo-montage/",
+      kind: "web",
+    },
     "african-bird-atlas-api": {
       id: "african-bird-atlas-api",
       title: "African Bird Atlas API",
@@ -126,6 +133,7 @@ export const siteContent = {
   ],
   reviewerAppIds: ["checklist-review", "ebird-hotspot-deduper"],
   allAppsExtraIds: [
+    "photo-montage",
     "african-bird-atlas-api",
     "ebird2latex",
     "countytracker",
